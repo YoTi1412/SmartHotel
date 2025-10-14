@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="demo_booking" model="smarthotel.booking">
+            <field name="name">John Doe</field>
+            <field name="room_number">101</field>
+            <field name="check_in">2025-10-14</field>
+            <field name="check_out">2025-10-16</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  cpp_core:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.cpp
+    container_name: smarthotel_cpp
+
+  api_gateway:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.gateway
+    ports:
+      - "8000:8000"
+    depends_on:
+      - cpp_core
+
+  odoo:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.odoo
+    ports:
+      - "8069:8069"
+    depends_on:
+      - api_gateway

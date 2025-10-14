@@ -1,0 +1,2 @@
+FROM odoo:17
+COPY ../odoo_module /mnt/extra-addons/smarthotel
